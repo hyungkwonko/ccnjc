@@ -203,6 +203,53 @@ nav {
     flex-shrink: 0;
 }
 
+/* Hero Supporters */
+.hero-supporters {
+    margin-top: 3rem;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.hero-supporters p {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+    opacity: 0.7;
+}
+
+.hero-supporter-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.hero-supporter-logos a {
+    display: block;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hero-supporter-logos a:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.hero-supporter-logos img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(30%);
+    transition: filter 0.3s ease;
+}
+
+.hero-supporter-logos a:hover img {
+    filter: grayscale(0%);
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -753,9 +800,17 @@ footer a:hover {
 
     /* Hero */
     .hero {
-        min-height: calc(100vh - 60px);
-        min-height: calc(100svh - 60px);
-        padding: 5rem 1.25rem 3rem;
+        min-height: 100vh;
+        min-height: 100svh;
+        padding: 80px 1.25rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hero-content {
+        padding: 0;
+        width: 100%;
     }
     
     .hero-badge {
@@ -784,6 +839,22 @@ footer a:hover {
         background: rgba(255,255,255,0.7);
         padding: 0.5rem 1rem;
         border-radius: 2rem;
+    }
+    
+    .hero-supporters {
+        margin-top: 2rem;
+    }
+    
+    .hero-supporters p {
+        font-size: 0.7rem;
+    }
+    
+    .hero-supporter-logos {
+        gap: 1.5rem;
+    }
+    
+    .hero-supporter-logos img {
+        height: 32px;
     }
 
     /* Sections */
@@ -992,7 +1063,8 @@ footer a:hover {
     .hero-badge,
     .hero h1,
     .hero-subtitle,
-    .hero-meta {
+    .hero-meta,
+    .hero-supporters {
         animation: none;
     }
     
@@ -1000,7 +1072,8 @@ footer a:hover {
     .past-card,
     .member-card,
     .btn,
-    .contact-links a {
+    .contact-links a,
+    .hero-supporter-logos a {
         transition: none;
     }
 }
