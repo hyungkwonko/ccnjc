@@ -55,4 +55,4 @@ Find the `schedule-body` div and add new `schedule-item` blocks.
 Find the `past-grid` div and add new `past-card` blocks.
 
 ---
-© 2025 CogCompNeuro Journal Club · Stanford University
+© 2026 CogCompNeuro Journal Club · Stanford University
