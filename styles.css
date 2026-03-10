@@ -470,15 +470,6 @@ section {
     flex-shrink: 0;
 }
 
-.schedule-actions {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-    padding: 0 1rem 1rem;
-}
-
 /* Past Sessions */
 #past-sessions {
     background: var(--color-bg-alt);
@@ -915,12 +906,6 @@ footer a:hover {
         font-size: 0.85rem;
     }
     
-    .schedule-actions {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 0 0.5rem 0.5rem;
-    }
-    
     .btn {
         width: 100%;
         padding: 1rem;
@@ -1076,4 +1061,71 @@ footer a:hover {
     .hero-supporter-logos a {
         transition: none;
     }
+}
+
+/* Sign-Up Banner */
+.signup-banner {
+    margin: 0 1.5rem 1.5rem;
+    background: linear-gradient(135deg, var(--color-warm-light) 0%, var(--color-accent-pale) 100%);
+    border-radius: 12px;
+    border: 1px dashed var(--color-warm);
+}
+
+.signup-banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.5rem 2rem;
+}
+
+.signup-banner-text h4 {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    color: var(--color-text);
+    margin-bottom: 0.25rem;
+}
+
+.signup-banner-text p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+.signup-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+    background: var(--color-warm);
+}
+
+.signup-btn:hover {
+    background: #b8875e;
+}
+
+@media (max-width: 768px) {
+    .signup-banner {
+        margin: 0 1rem 1rem;
+    }
+
+    .signup-banner-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.25rem;
+        gap: 1rem;
+    }
+
+    .signup-btn {
+        width: 100%;
+    }
+}
+
+/* Hero CTA */
+.hero-cta {
+    margin-top: 2rem;
+    animation: fadeInUp 0.8s ease-out 0.35s both;
+}
+
+.hero-cta .signup-btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
 }
